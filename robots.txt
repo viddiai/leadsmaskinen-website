@@ -1,0 +1,6 @@
+# Robots.txt for portalfabriken.se
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://portalfabriken.se/sitemap.xml

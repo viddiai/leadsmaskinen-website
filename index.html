@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+
+<head>
+  <!-- Cookie Script Banner -->
+  <script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/28e56ffbc7a251813f41c0b028fb5a10.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1W2VKB22DN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-1W2VKB22DN');
+  </script>
+  <meta charset="utf-8">
+  <title>Portalfabriken — Digital Strategi &amp; Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Vi bygger inte bara hemsidor; vi skapar digitala tillgångar.">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portalfabriken — Digital Strategi & Design">
+  <meta property="og:description" content="Vi bygger konverteringsfokuserade nichade portaler som driver affärer. No Cure. No Pay.">
+  <meta property="og:image" content="/og-image.jpg">
+  <meta property="og:url" content="https://portalfabriken.se">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portalfabriken — Digital Strategi & Design">
+  <meta name="twitter:description" content="Vi bygger konverteringsfokuserade nichade portaler som driver affärer.">
+  <meta name="twitter:image" content="/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Calendly -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              dark: '#0A0A1A',
+              medium: '#12121F',
+              light: '#1A1A2E'
+            },
+            coral: {
+              DEFAULT: '#FF6B35',
+              light: '#FF8C42',
+              pale: '#FFB088'
+            },
+            slate: {
+              custom: '#6B7280'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --color-navy-dark: #0A0A1A;
+      --color-navy-medium: #12121F;
+      --color-coral: #FF6B35;
+      --color-coral-light: #FF8C42;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--color-navy-dark);
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Custom Selection */
+    ::selection {
+      background: rgba(255, 107, 53, 0.3);
+      color: #fff;
+    }
+
+    /* Scroll Reveal Animations */
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Staggered Animations */
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* Button Styles */
+    .btn-primary {
+      background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+      color: #FFFFFF;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -5px rgba(255, 107, 53, 0.4);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #FFFFFF;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Card Hover Effects */
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Link Underline Animation */
+    .link-underline {
+      position: relative;
+    }
+
+    .link-underline::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: #FF6B35;
+      transition: width 0.3s ease;
+    }
+
+    .link-underline:hover::after {
+      width: 100%;
+    }
+
+    /* Eyebrow Text */
+    .eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #FF6B35;
+    }
+
+    /* Marquee Animation */
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-100% / 3)); }
+    }
+
+    .animate-marquee {
+      animation: marquee 20s linear infinite;
+    }
+
+    .group:hover .animate-marquee {
+      animation-play-state: paused;
+    }
+
+    /* Navbar Scroll Effect */
+    .navbar {
+      transition: background 0.3s ease, backdrop-filter 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(10, 10, 26, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(135deg, #FF6B35 0%, #FF8C42 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Modal Animation */
+    @keyframes modal-in {
+      from {
+        opacity: 0;
+        transform: scale(0.95) translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .animate-modal-in {
+      animation: modal-in 0.3s ease-out;
+    }
+
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* Focus States */
+    :focus-visible {
+      outline: 2px solid #FF6B35;
+      outline-offset: 2px;
+    }
+
+    /* FAQ Details Animation */
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="antialiased overflow-x-hidden">
+
+  <!-- Background -->
+  <div class="fixed inset-0 -z-10 bg-navy-dark">
+    <div class="absolute inset-0 bg-[linear-gradient(135deg,#0A0A1A_0%,#1A1A2E_50%,#0A0A1A_100%)]"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+      <nav class="flex h-[72px] lg:h-20 items-center justify-between">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-3 group">
+          <img src="favicon.png" alt="Portalfabriken" class="h-9 w-9 rounded-lg transition-transform group-hover:scale-105">
+          <span class="font-semibold text-white tracking-tight hidden sm:block">Portalfabriken</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#guide" class="text-sm text-white/70 hover:text-white transition-colors link-underline">Guide</a>
+          <a href="#analyzer" class="text-sm text-white/70 hover:text-white transition-colors link-underline">Konverteringsanalys</a>
+          <a href="#pricing" class="text-sm text-white/70 hover:text-white transition-colors link-underline">Investering</a>
+          <a href="#faq" class="text-sm text-white/70 hover:text-white transition-colors link-underline">FAQ</a>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="flex items-center gap-4">
+          <a href="#"
+            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/stefan-245/30min?hide_gdpr_banner=1&background_color=0A0A1A&text_color=ffffff&primary_color=FF6B35'});return false;"
+            class="btn-primary text-sm">
+            <span class="hidden sm:inline">Boka konsultation</span>
+            <span class="sm:hidden">Boka</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="lg:hidden p-2 text-white/70 hover:text-white" aria-label="Öppna meny" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 6h16"></path>
+              <path d="M4 12h16"></path>
+              <path d="M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-navy-dark/98 backdrop-blur-xl border-b border-white/5 p-6 lg:hidden">
+          <nav class="flex flex-col gap-4">
+            <a href="#guide" class="text-base text-white/80 hover:text-white py-2 border-b border-white/5">Guide för ökad konvertering</a>
+            <a href="#analyzer" class="text-base text-white/80 hover:text-white py-2 border-b border-white/5">Gratis konverteringsanalys</a>
+            <a href="#ecosystem" class="text-base text-white/80 hover:text-white py-2 border-b border-white/5">Ekosystem</a>
+            <a href="#pricing" class="text-base text-white/80 hover:text-white py-2 border-b border-white/5">Investering</a>
+            <a href="#faq" class="text-base text-white/80 hover:text-white py-2">FAQ</a>
+          </nav>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-6 overflow-hidden">
+      <!-- Glow Effect -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-coral/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+      <div class="max-w-[1280px] mx-auto relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <!-- Eyebrow -->
+          <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8">
+            <span class="eyebrow">Accepterar nya projekt Q1 2026</span>
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-coral opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-coral"></span>
+            </span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="reveal reveal-delay-1 text-4xl sm:text-5xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1] mb-6">
+            Ersättning för resultat,<br class="hidden sm:block"> inte timmar
+          </h1>
+          <p class="reveal reveal-delay-2 text-xl lg:text-2xl text-white/40 font-medium tracking-tight mb-8">
+            Idealkunder in. Affärer ut.
+          </p>
+
+          <!-- Subtitle -->
+          <p class="reveal reveal-delay-3 text-base lg:text-lg text-white/60 font-light leading-relaxed max-w-2xl mx-auto mb-10">
+            Vi bygger nichade portaler som ökar konvertering, kvalificerar målgruppen och skapar en förutsägbar pipeline. Inga onödiga funktioner, bara det som driver affärer.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="reveal reveal-delay-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="#"
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/stefan-245/30min?hide_gdpr_banner=1&background_color=0A0A1A&text_color=ffffff&primary_color=FF6B35'});return false;"
+              class="btn-primary text-base w-full sm:w-auto">
+              Boka konsultation: få fler kvalificerade leads
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conversion Analyzer Widget -->
+    <section class="py-20 lg:py-24 px-6 border-t border-white/5" id="analyzer">
+      <div class="max-w-lg mx-auto">
+        <div class="text-center mb-10 reveal">
+          <span class="eyebrow block mb-4">Gratis Verktyg</span>
+          <h2 class="text-2xl lg:text-4xl font-bold text-white tracking-tight mb-4">
+            Testa din webbsidas konverteringsförmåga
+          </h2>
+          <p class="text-white/50 text-base font-light leading-relaxed">
+            Få en obarmhärtig analys av vad som hindrar din webbsida från att konvertera besökare till leads.
+          </p>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <div id="conversion-analyzer-widget"></div>
+          <script>
+            window.CAWidgetConfig = {
+              theme: 'dark',
+              primaryColor: '#FF6B35'
+            };
+          </script>
+          <script src="https://konverteringsoptimerare-production.up.railway.app/api/widget.js"></script>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section class="py-20 lg:py-24 px-6" id="ecosystem">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="text-center mb-12 reveal">
+          <span class="eyebrow block mb-4">Totalt Ekosystem</span>
+          <h2 class="text-3xl lg:text-5xl font-bold text-white tracking-tight">
+            En komplett motor för leadgenerering
+          </h2>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <div class="rounded-2xl overflow-hidden border border-white/10 bg-navy-medium/50">
+            <img src="portalfabrikens%20process.png" alt="Portalfabrikens Process – Från räckvidd till nurturing" class="w-full h-auto">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Bar / Trust Section -->
+    <section class="py-12 border-y border-white/5 bg-navy-medium/30">
+      <div class="max-w-[1280px] mx-auto px-6">
+        <p class="eyebrow text-center mb-8 opacity-60">Drivs av AI och automation</p>
+
+        <div class="relative flex overflow-x-hidden group">
+          <!-- Gradient Masks -->
+          <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-navy-dark to-transparent z-10"></div>
+          <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-navy-dark to-transparent z-10"></div>
+
+          <div class="animate-marquee whitespace-nowrap flex items-center gap-20 py-4">
+            <img src="logo-openai.png" alt="OpenAI" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-gemini.png" alt="Gemini" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-claude.png" alt="Claude" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-highlevel.png" alt="HighLevel" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-instantly.png" alt="Instantly" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-openai.png" alt="OpenAI" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-gemini.png" alt="Gemini" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-claude.png" alt="Claude" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-highlevel.png" alt="HighLevel" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-instantly.png" alt="Instantly" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-openai.png" alt="OpenAI" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-gemini.png" alt="Gemini" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-claude.png" alt="Claude" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-highlevel.png" alt="HighLevel" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+            <img src="logo-instantly.png" alt="Instantly" class="h-8 w-auto opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manifesto / Reality Check Section -->
+    <section class="py-20 lg:py-32 px-6" id="manifesto">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12 reveal">
+          <span class="eyebrow block mb-4">Verklighetscheck</span>
+          <h2 class="text-3xl lg:text-5xl font-bold text-white tracking-tight leading-tight">
+            Den brutala verkligheten:<br>
+            <span class="text-white/40">Ni saknar systemet som gör kalla kontakter till faktiska affärer.</span>
+          </h2>
+        </div>
+
+        <div class="reveal reveal-delay-1">
+          <div class="relative bg-gradient-to-br from-coral/10 to-coral/5 border border-coral/20 rounded-2xl p-8 lg:p-12">
+            <!-- Icon -->
+            <div class="absolute top-8 left-8">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-coral/60">
+                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path>
+                <path d="M12 9v4"></path>
+                <path d="M12 17h.01"></path>
+              </svg>
+            </div>
+
+            <p class="text-lg lg:text-xl text-white/80 font-light leading-relaxed lg:pl-10">
+              De flesta byråer säljer dig luft: snygga ytor utan mätbara resultat. En "hemsida" löser ingenting. Du behöver ett system som pressar fram konverteringar. Vi bygger på data, inte på chansningar. Sluta finansiera byråers timbanker och börja kräva levererad affärsnytta — punkt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Section: Us vs Them -->
+    <section class="py-20 lg:py-24 px-6 border-t border-white/5">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl lg:text-5xl font-bold text-white tracking-tight mb-4">
+            Standard hos Portalfabriken
+          </h2>
+          <p class="text-white/50 text-base lg:text-lg font-light">
+            Ni får en skalbar motor – inte timmar. Utfallet är kärnan.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 reveal reveal-delay-1">
+          <!-- Traditional Agencies -->
+          <div class="p-8 rounded-2xl border border-white/5 bg-white/[0.02] opacity-60 hover:opacity-80 transition-opacity">
+            <h3 class="text-xl font-semibold text-white/60 mb-6">Traditionella Byråer</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-white/50 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-400/60 flex-shrink-0 mt-0.5">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+                Betalt för timmar/retainer, oavsett leads
+              </li>
+              <li class="flex items-start gap-3 text-white/50 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-400/60 flex-shrink-0 mt-0.5">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+                Incitament kan spreta: "aktivitet" blir målet
+              </li>
+              <li class="flex items-start gap-3 text-white/50 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-400/60 flex-shrink-0 mt-0.5">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+                Otydlig spårning och svår insyn
+              </li>
+              <li class="flex items-start gap-3 text-white/50 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-400/60 flex-shrink-0 mt-0.5">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+                Långsammare leverans, mer manuell hantering
+              </li>
+              <li class="flex items-start gap-3 text-white/50 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-400/60 flex-shrink-0 mt-0.5">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+                Högre totalpris över tid i många upplägg
+              </li>
+              <li class="flex items-start gap-3 text-white/50 text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-red-400/60 flex-shrink-0 mt-0.5">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+                Optimering blir "om tid finns"
+              </li>
+            </ul>
+          </div>
+
+          <!-- Portalfabriken -->
+          <div class="relative p-8 rounded-2xl border border-coral/30 bg-gradient-to-br from-coral/10 to-transparent shadow-[0_0_60px_-20px_rgba(255,107,53,0.15)]">
+            <!-- Badge -->
+            <div class="absolute -top-3 -right-3">
+              <span class="relative flex h-7 w-7">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-coral opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-7 w-7 bg-coral items-center justify-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-white">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </span>
+              </span>
+            </div>
+
+            <h3 class="text-xl font-semibold text-white mb-6">Portalfabriken</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-white text-sm">
+                <div class="bg-coral/20 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                Betalt kopplat till levererade leads (pay-per-lead)
+              </li>
+              <li class="flex items-start gap-3 text-white text-sm">
+                <div class="bg-coral/20 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                Gemensamma incitament: vi vinner när partnern får leads
+              </li>
+              <li class="flex items-start gap-3 text-white text-sm">
+                <div class="bg-coral/20 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                Full transparens i gemensam dashboard
+              </li>
+              <li class="flex items-start gap-3 text-white text-sm">
+                <div class="bg-coral/20 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                Snabbare leverans genom produktiserat, automatiserat arbetssätt
+              </li>
+              <li class="flex items-start gap-3 text-white text-sm">
+                <div class="bg-coral/20 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                Lägre pris än byrå i modellen, utan retainer-låsta kostnader
+              </li>
+              <li class="flex items-start gap-3 text-white text-sm">
+                <div class="bg-coral/20 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                Månadsvis optimeringsloop som standard
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Fit Section -->
+    <section class="py-20 lg:py-24 px-6 border-t border-white/5">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-3xl lg:text-5xl font-bold text-white tracking-tight mb-4">
+            Är Portalfabriken rätt för dig?
+          </h2>
+          <p class="text-white/50 text-base lg:text-lg font-light">
+            Vi är selektiva med vilka uppdrag vi tar för att säkerställa bästa möjliga resultat för våra partners.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8 reveal reveal-delay-1">
+          <!-- Good Fit -->
+          <div class="p-8 rounded-2xl border border-coral/20 bg-gradient-to-br from-coral/5 to-transparent">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="bg-coral/20 p-2.5 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white">Vi är en bra match om</h3>
+            </div>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-white/80 text-sm">
+                <div class="bg-coral/15 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                B2B med höga priser eller goda marginaler
+              </li>
+              <li class="flex items-start gap-3 text-white/80 text-sm">
+                <div class="bg-coral/15 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                Fungerande erbjudande men ojämnt leadflöde
+              </li>
+              <li class="flex items-start gap-3 text-white/80 text-sm">
+                <div class="bg-coral/15 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                Beredd att delta i en ICP-workshop
+              </li>
+              <li class="flex items-start gap-3 text-white/80 text-sm">
+                <div class="bg-coral/15 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                Kan vara bollplank kring budskap och erbjudanden
+              </li>
+              <li class="flex items-start gap-3 text-white/80 text-sm">
+                <div class="bg-coral/15 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                Har kapacitet att följa upp leads som kommer in
+              </li>
+              <li class="flex items-start gap-3 text-white/80 text-sm">
+                <div class="bg-coral/15 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-coral">
+                    <path d="M20 6 9 17l-5-5"></path>
+                  </svg>
+                </div>
+                Öppen för AI och automation
+              </li>
+            </ul>
+          </div>
+
+          <!-- Poor Fit -->
+          <div class="p-8 rounded-2xl border border-white/5 bg-white/[0.02] opacity-70">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="bg-red-500/10 p-2.5 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-red-400">
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-white/80">Vi passar sämre om</h3>
+            </div>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-white/60 text-sm">
+                <div class="bg-red-500/10 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-red-400">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                  </svg>
+                </div>
+                Nystartat utan bevisad affärsmodell
+              </li>
+              <li class="flex items-start gap-3 text-white/60 text-sm">
+                <div class="bg-red-500/10 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-red-400">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                  </svg>
+                </div>
+                B2C eller låga marginaler
+              </li>
+              <li class="flex items-start gap-3 text-white/60 text-sm">
+                <div class="bg-red-500/10 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-red-400">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                  </svg>
+                </div>
+                Ingen som aktivt bearbetar leads
+              </li>
+              <li class="flex items-start gap-3 text-white/60 text-sm">
+                <div class="bg-red-500/10 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-red-400">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                  </svg>
+                </div>
+                Vill ha snabba engångsresultat
+              </li>
+              <li class="flex items-start gap-3 text-white/60 text-sm">
+                <div class="bg-red-500/10 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-red-400">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                  </svg>
+                </div>
+                Inte intresserad av dialog kring målgrupp och budskap
+              </li>
+              <li class="flex items-start gap-3 text-white/60 text-sm">
+                <div class="bg-red-500/10 p-1 rounded-full flex-shrink-0 mt-0.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" class="text-red-400">
+                    <path d="M18 6 6 18"></path>
+                    <path d="m6 6 12 12"></path>
+                  </svg>
+                </div>
+                Intern oenighet om säljstrategi
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 lg:py-32 px-6 border-t border-white/5" id="pricing">
+      <div class="max-w-[1280px] mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 mb-6">
+            <span class="h-1.5 w-1.5 rounded-full bg-coral"></span>
+            <span class="text-xs font-medium text-white/80">Partnerskap</span>
+          </div>
+          <h2 class="text-3xl lg:text-5xl font-bold text-white tracking-tight mb-4">
+            Betala för leads, inte timmar
+          </h2>
+          <p class="text-xl lg:text-2xl font-medium text-white/70 mb-8">
+            Partnerskap: 25 000 i start, sedan pay-per-lead med full insyn i dashboarden.
+          </p>
+          <div class="text-white/50 font-light text-base leading-relaxed space-y-4 text-left lg:text-center">
+            <p>Vi tar betalt på ett sätt som är enkelt och rättvist för er som partner. Upplägget har två delar: först bygger vi lead-motorn så att ni får rätt trafik, en nischad portal som konverterar och automation som tar hand om leads och återaktiverar kontakter.</p>
+            <p>När motorn är live betalar ni inte för timmar, utan bara när vi levererar leads enligt en gemensamt beslutad lead-definition. Ni får full insyn via en gemensam dashboard där ni ser hela kedjan från trafik till lead-kvalitet och utfall.</p>
+          </div>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="grid lg:grid-cols-2 gap-8 mb-12">
+          <!-- Startup Cost -->
+          <article class="reveal reveal-delay-1 card-hover rounded-2xl border border-white/10 bg-navy-medium/50 p-8 lg:p-10">
+            <div class="mb-6">
+              <h3 class="text-xl font-semibold text-white mb-2">Startkostnad</h3>
+              <div class="flex items-baseline gap-2">
+                <span class="text-4xl lg:text-5xl font-bold text-white tracking-tight">25 000 kr</span>
+                <span class="text-sm text-white/40 uppercase">engångs</span>
+              </div>
+              <div class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 text-xs text-white/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-coral">
+                  <path d="M12 6v6l4 2"></path>
+                  <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                Leverans: 3-4 Veckor
+              </div>
+            </div>
+
+            <ul class="space-y-3">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/70">Kickoff och målbild för partnerskapet</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/70">ICP-precision: vem vi ska nå och varför</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/70">Budskapsgrund: vad som får rätt personer att agera</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/70">Outbound-setup som driver rätt trafik till portalen</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/70">Nischad portal med 5+ tydliga CTAs/verktyg</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/70">Copy + UX som minskar friktion och ökar konvertering</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/70">Marketing automation som värmer leads och återaktiverar kontakter</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/70">Spårning och mätpunkter för hela kedjan</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/70">Gemensam dashboard: trafik → konvertering → leads → kvalitet → utfall</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/70">Plan för månadsvis optimeringsloop</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Pay-per-lead -->
+          <article class="reveal reveal-delay-2 card-hover rounded-2xl border border-coral/30 bg-gradient-to-br from-coral/10 to-transparent p-8 lg:p-10 relative overflow-hidden">
+            <!-- Glow -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-coral/10 blur-[80px] rounded-full pointer-events-none"></div>
+
+            <div class="relative mb-6">
+              <h3 class="text-xl font-semibold text-white mb-2">Pay-per-lead</h3>
+              <div class="flex items-baseline gap-2">
+                <span class="text-2xl lg:text-3xl font-bold text-white tracking-tight uppercase">Resultatbaserad ersättning</span>
+              </div>
+              <div class="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-coral/15 border border-coral/20 text-xs text-coral font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                Månadsvis
+              </div>
+            </div>
+
+            <ul class="relative space-y-3">
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/80">Partnern betalar endast när vi skapar leads</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/80">Inga retainer-löften. Betalning kopplas till levererade leads</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/80">Lead-definition sätts tillsammans innan start</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/80">Kvalitetsfilter som stoppar irrelevanta kontakter</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/80">Exakta exkluderingar (studenter, rekrytering, leverantörer mm)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/80">Spårbarhet per lead i dashboarden</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/80">Månadsvis uppföljning med datadriven insikt</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral flex-shrink-0 mt-0.5">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span class="text-sm text-white/80">Gemensamma incitament: vi tjänar när partnern får leads</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center reveal">
+          <a href="#"
+            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/stefan-245/30min?hide_gdpr_banner=1&background_color=0A0A1A&text_color=ffffff&primary_color=FF6B35'});return false;"
+            class="btn-primary text-base">
+            Ta reda på om pay-per-lead passar er
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="relative py-20 lg:py-32 px-6 overflow-hidden">
+      <!-- Background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-coral/10 via-navy-dark to-navy-dark"></div>
+
+      <div class="max-w-3xl mx-auto relative z-10">
+        <div class="text-center mb-16 reveal">
+          <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/70 mb-4">FAQ</span>
+          <h2 class="text-3xl lg:text-5xl font-bold text-white tracking-tight mb-4">Vanliga frågor</h2>
+          <p class="text-white/50 text-base font-light">Svar på det du funderar på.</p>
+        </div>
+
+        <div class="space-y-4 reveal reveal-delay-1">
+          <!-- FAQ Item 1 -->
+          <details class="group rounded-2xl border border-white/10 bg-navy-medium/50 overflow-hidden">
+            <summary class="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-white hover:bg-white/[0.02] transition-colors">
+              Vad räknas som ett lead?
+              <span class="transition duration-300 group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-coral">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6 text-base font-light text-white/60 leading-relaxed">
+              Ett lead är en relevant kontakt som matchar den målgrupp vi har enats om. Exakt vad som ska ingå i ett "lead" bestäms tillsammans innan start, så det är tydligt, mätbart och rättvist.
+            </div>
+          </details>
+
+          <!-- FAQ Item 2 -->
+          <details class="group rounded-2xl border border-white/10 bg-navy-medium/50 overflow-hidden">
+            <summary class="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-white hover:bg-white/[0.02] transition-colors">
+              Hur säkerställer ni kvalitet?
+              <span class="transition duration-300 group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-coral">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6 text-base font-light text-white/60 leading-relaxed">
+              Vi bygger in kvalitet från början med tydliga filter och en process som sorterar bort irrelevanta kontakter. Därefter följer vi upp kvaliteten löpande i dashboarden och justerar budskap, flöden och portal utifrån data.
+            </div>
+          </details>
+
+          <!-- FAQ Item 3 -->
+          <details class="group rounded-2xl border border-white/10 bg-navy-medium/50 overflow-hidden">
+            <summary class="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-white hover:bg-white/[0.02] transition-colors">
+              Hur snabbt kan vi vara live?
+              <span class="transition duration-300 group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-coral">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6 text-base font-light text-white/60 leading-relaxed">
+              Vi jobbar produktiserat och automation-first, vilket normalt ger en leverans på 3–4 veckor. Exakt tidplan beror på era förutsättningar och vilka åtkomster/material som behövs för att gå live.
+            </div>
+          </details>
+
+          <!-- FAQ Item 4 -->
+          <details class="group rounded-2xl border border-white/10 bg-navy-medium/50 overflow-hidden">
+            <summary class="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-white hover:bg-white/[0.02] transition-colors">
+              Vad krävs av oss som partner?
+              <span class="transition duration-300 group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-coral">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6 text-base font-light text-white/60 leading-relaxed">
+              Ni behöver vara delaktiga i det som styr resultatet: målgrupp, prioriteringar och definitionen av ett lead. Ni behöver också delta i regelbunden uppföljning så vi kan optimera med fakta. Bygge, copy och teknisk setup hanterar vi.
+            </div>
+          </details>
+
+          <!-- FAQ Item 5 -->
+          <details class="group rounded-2xl border border-white/10 bg-navy-medium/50 overflow-hidden">
+            <summary class="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-white hover:bg-white/[0.02] transition-colors">
+              Vad händer om vi inte får resultat?
+              <span class="transition duration-300 group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-coral">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6 text-base font-light text-white/60 leading-relaxed">
+              Vi kan inte garantera ett visst utfall. Därför bygger vi för spårbarhet så vi snabbt kan se var det brister och vad som ska förbättras. Om det inte rör sig i rätt riktning tar vi en gemensam genomgång och justerar planen.
+            </div>
+          </details>
+
+          <!-- FAQ Item 6 -->
+          <details class="group rounded-2xl border border-white/10 bg-navy-medium/50 overflow-hidden">
+            <summary class="flex cursor-pointer list-none items-center justify-between p-6 text-lg font-medium text-white hover:bg-white/[0.02] transition-colors">
+              Varför finns en startkostnad om ni tar betalt per lead?
+              <span class="transition duration-300 group-open:rotate-180">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-coral">
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </span>
+            </summary>
+            <div class="px-6 pb-6 text-base font-light text-white/60 leading-relaxed">
+              För att vi måste bygga och sätta upp lead-motorn först: rätt målgrupp, rätt flöden, portal och spårning. Startkostnaden finansierar uppsättningen så att den löpande betalningen kan kopplas till levererade leads, inte till timmar eller retainer.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guide Section -->
+    <section id="guide" class="py-20 lg:py-24 px-6 border-t border-white/5">
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 lg:p-12 flex flex-col lg:flex-row gap-10 items-center reveal shadow-2xl">
+          <!-- Guide Cover -->
+          <div class="flex-shrink-0 w-full lg:w-80">
+            <img src="omslag.png" alt="7 beprövade sätt att öka konverteringen och vinna fler affärer" class="w-full rounded-xl shadow-lg">
+          </div>
+
+          <!-- Guide Content -->
+          <div class="flex-1">
+            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight mb-4">
+              7 beprövade sätt att öka konverteringen och vinna fler affärer
+            </h2>
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Denna guide ger dig</h3>
+            <p class="text-gray-600 mb-3 text-sm">Konkreta verktyg för att:</p>
+            <ul class="space-y-2 text-gray-700 mb-6 text-sm">
+              <li class="flex items-start gap-2">
+                <span class="text-coral mt-0.5">•</span>
+                <span>Formulera ett värdeerbjudande som faktiskt övertygar svenska beslutsfattare</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-coral mt-0.5">•</span>
+                <span>Fånga upp potentiella kunder innan de är redo att köpa</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-coral mt-0.5">•</span>
+                <span>Eliminera friktion som dödar affärer</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-coral mt-0.5">•</span>
+                <span>Bygga systematiskt förtroende genom sociala bevis</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-coral mt-0.5">•</span>
+                <span>Skapa handlingsdriven kommunikation som leder till avslut</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-coral mt-0.5">•</span>
+                <span>Strukturera komplex information utan att överväldiga</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-coral mt-0.5">•</span>
+                <span>Använda avancerade strategier för dramatisk tillväxt</span>
+              </li>
+            </ul>
+            <div class="flex items-start gap-2 text-gray-600 mb-6 bg-coral/5 p-3 rounded-lg">
+              <span class="text-coral text-lg">*</span>
+              <span class="text-sm">Varje kapitel avslutas med "3 saker du kan göra imorgon" – konkreta åtgärder som ger omedelbar effekt.</span>
+            </div>
+            <form id="guide-form" action="https://formspree.io/f/mzddpzqo" method="POST" class="flex flex-col sm:flex-row gap-4">
+              <input
+                type="email"
+                name="email"
+                placeholder="Din e-postadress"
+                required
+                class="flex-1 px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-coral focus:border-transparent text-gray-900 placeholder-gray-500"
+              />
+              <input type="hidden" name="_subject" value="Ny guide-nedladdning från Portalfabriken">
+              <input type="hidden" name="_next" value="https://portalfabriken.se/tack.html">
+              <input type="hidden" name="guide" value="7 beprövade sätt att öka konverteringen">
+              <button type="submit" class="btn-primary whitespace-nowrap">
+                Hämta guiden
+              </button>
+            </form>
+            <p class="mt-4 text-xs text-gray-400">Vi behandlar dina uppgifter enligt vår integritetspolicy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-navy-dark pt-16 pb-8">
+    <div class="max-w-[1280px] mx-auto px-6">
+      <div class="grid gap-12 lg:grid-cols-4">
+        <!-- Logo & Description -->
+        <div class="lg:col-span-2">
+          <a href="/" class="block mb-6 font-bold text-white text-xl tracking-tight">
+            Portalfabriken.
+          </a>
+          <p class="text-sm text-white/50 font-light max-w-sm leading-relaxed mb-6">
+            Vi bygger konverteringsfokuserade digitala upplevelser för varumärken som kräver det bästa.
+          </p>
+          <a href="#"
+            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/stefan-245/30min?hide_gdpr_banner=1&background_color=0A0A1A&text_color=ffffff&primary_color=FF6B35'});return false;"
+            class="btn-primary text-sm">
+            <span>Boka konsultation</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h4 class="text-sm font-semibold text-white mb-4">Byrå</h4>
+          <ul class="space-y-3 text-sm text-white/50 font-light">
+            <li><a href="#manifesto" class="hover:text-coral transition-colors">Filosofi</a></li>
+            <li><a href="#ecosystem" class="hover:text-coral transition-colors">Ekosystem</a></li>
+            <li><a href="#pricing" class="hover:text-coral transition-colors">Investering</a></li>
+            <li><a href="#faq" class="hover:text-coral transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h4 class="text-sm font-semibold text-white mb-4">Legal</h4>
+          <ul class="space-y-3 text-sm text-white/50 font-light">
+            <li><a href="/integritetspolicy.html" class="hover:text-coral transition-colors">Integritetspolicy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="mt-16 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-white/30 font-light">© <script>document.write(new Date().getFullYear())</script> Portalfabriken. Alla rättigheter förbehållna.</p>
+        <div class="flex items-center gap-6">
+          <a href="/integritetspolicy.html" class="text-xs text-white/40 hover:text-coral transition-colors">Integritetspolicy</a>
+          <div class="flex items-center gap-2">
+            <div class="w-2 h-2 rounded-full bg-coral animate-pulse"></div>
+            <span class="text-xs text-white/40 font-light">System Operational</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Exit Intent Modal -->
+  <div id="exit-intent-modal" class="fixed inset-0 z-50 hidden">
+    <!-- Backdrop -->
+    <div class="absolute inset-0 bg-navy-dark/80 backdrop-blur-sm" onclick="closeExitModal()"></div>
+
+    <!-- Modal Content -->
+    <div class="absolute inset-0 flex items-center justify-center p-4">
+      <div class="absolute w-[500px] h-[500px] bg-coral/20 rounded-full blur-[100px] pointer-events-none"></div>
+      <div class="relative bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden shadow-2xl animate-modal-in">
+        <!-- Close Button -->
+        <button onclick="closeExitModal()" class="absolute top-4 right-4 z-10 p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-gray-600">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+
+        <div class="flex flex-col md:flex-row">
+          <!-- Guide Cover -->
+          <div class="md:w-2/5 bg-navy-dark p-6 flex items-center justify-center">
+            <img src="omslag.png" alt="7 beprövade sätt att öka konverteringen" class="w-full max-w-xs rounded-lg shadow-lg">
+          </div>
+
+          <!-- Content -->
+          <div class="md:w-3/5 p-8 lg:p-10">
+            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight mb-3">
+              Vänta! Missa inte guiden.
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Ladda ner vår kostnadsfria guide och lär dig 7 beprövade sätt att öka konverteringen och vinna fler affärer.
+            </p>
+
+            <ul class="space-y-3 text-gray-700 mb-6 text-sm">
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral mt-0.5 flex-shrink-0">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span>Konkreta verktyg du kan använda direkt</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral mt-0.5 flex-shrink-0">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span>Strategier för svenska B2B-företag</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-coral mt-0.5 flex-shrink-0">
+                  <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span>3 saker du kan göra imorgon i varje kapitel</span>
+              </li>
+            </ul>
+
+            <form id="exit-intent-form" action="https://formspree.io/f/mzddpzqo" method="POST" class="space-y-4">
+              <input
+                type="email"
+                name="email"
+                placeholder="Din e-postadress"
+                required
+                class="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-coral focus:border-transparent text-gray-900 placeholder-gray-500"
+              />
+              <input type="hidden" name="_subject" value="Ny guide-nedladdning (Exit Intent) från Portalfabriken">
+              <input type="hidden" name="_next" value="https://portalfabriken.se/tack.html">
+              <input type="hidden" name="guide" value="7 beprövade sätt att öka konverteringen">
+              <input type="hidden" name="source" value="exit-intent-popup">
+              <button type="submit" class="w-full btn-primary justify-center">
+                Hämta guiden gratis
+              </button>
+            </form>
+
+            <p class="mt-4 text-xs text-gray-400 text-center">
+              Vi behandlar dina uppgifter enligt vår integritetspolicy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Scroll Reveal Animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const revealElements = document.querySelectorAll('.reveal');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      revealElements.forEach(el => observer.observe(el));
+
+      // Navbar Scroll Effect
+      const navbar = document.querySelector('.navbar');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('scrolled');
+        } else {
+          navbar.classList.remove('scrolled');
+        }
+      });
+
+      // Mobile Menu Toggle
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          const isOpen = !mobileMenu.classList.contains('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        });
+      }
+
+      // Form Submission Handler
+      const forms = document.querySelectorAll('#guide-form, #exit-intent-form');
+      forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const formData = new FormData(form);
+          const button = form.querySelector('button[type="submit"]');
+          const originalText = button.textContent;
+
+          button.textContent = 'Skickar...';
+          button.disabled = true;
+
+          fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          })
+          .then(response => {
+            if (response.ok) {
+              window.location.href = '/tack.html';
+            } else {
+              throw new Error('Form submission failed');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            button.textContent = originalText;
+            button.disabled = false;
+            alert('Något gick fel. Försök igen.');
+          });
+        });
+      });
+    });
+
+    // Exit Intent Popup
+    (function() {
+      const STORAGE_KEY = 'exitIntentShown';
+      let hasShown = sessionStorage.getItem(STORAGE_KEY) === 'true';
+
+      function showExitModal() {
+        if (hasShown) return;
+        const modal = document.getElementById('exit-intent-modal');
+        if (modal) {
+          modal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+          hasShown = true;
+          sessionStorage.setItem(STORAGE_KEY, 'true');
+        }
+      }
+
+      window.closeExitModal = function() {
+        const modal = document.getElementById('exit-intent-modal');
+        if (modal) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+      };
+
+      // Desktop: Mouse leave detection
+      document.addEventListener('mouseout', function(e) {
+        if (!e.toElement && !e.relatedTarget && e.clientY < 10) {
+          showExitModal();
+        }
+      });
+
+      // Mobile: Back button or scroll up from top
+      let lastScrollY = 0;
+      window.addEventListener('scroll', function() {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY < lastScrollY && currentScrollY < 100 && lastScrollY > 300) {
+          showExitModal();
+        }
+        lastScrollY = currentScrollY;
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeExitModal();
+      });
+    })();
+  </script>
+
+</body>
+</html>
