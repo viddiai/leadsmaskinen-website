@@ -20,7 +20,7 @@ export function RoiSection() {
           {ROI_STATS.map((stat, i) => (
             <AnimateOnScroll key={stat.label} delay={i * 0.1}>
               <div className="text-center">
-                <span className="block text-h2 font-extrabold text-graphite">
+                <span className="block text-3xl font-extrabold text-graphite whitespace-nowrap lg:text-h2">
                   {stat.value}
                 </span>
                 <span className="mt-1 block text-sm text-steel">
