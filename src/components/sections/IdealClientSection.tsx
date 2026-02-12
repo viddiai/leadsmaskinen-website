@@ -17,8 +17,7 @@ export function IdealClientSection() {
       <div className="mx-auto grid max-w-3xl gap-8 lg:grid-cols-2">
         <AnimateOnScroll delay={0}>
           <div className="rounded-lg border-2 border-success/30 bg-success/5 p-6">
-            <h3 className="text-h3 mb-4 flex items-center gap-2 font-semibold text-graphite">
-              <Check className="h-6 w-6 text-success" />
+            <h3 className="text-h3 mb-4 font-semibold text-graphite">
               Bra match
             </h3>
             <ul className="space-y-3">
@@ -34,8 +33,7 @@ export function IdealClientSection() {
 
         <AnimateOnScroll delay={0.15}>
           <div className="rounded-lg border-2 border-red-200 bg-red-50 p-6">
-            <h3 className="text-h3 mb-4 flex items-center gap-2 font-semibold text-graphite">
-              <X className="h-6 w-6 text-red-400" />
+            <h3 className="text-h3 mb-4 font-semibold text-graphite">
               Passar sämre
             </h3>
             <ul className="space-y-3">
