@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
+import Script from "next/script";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 export function FinalCtaSection() {
@@ -38,9 +38,15 @@ export function FinalCtaSection() {
         </AnimateOnScroll>
 
         <AnimateOnScroll delay={0.2}>
-          <div className="mt-10">
-            <Button size="lg">Boka konsultation</Button>
-          </div>
+          <div
+            className="calendly-inline-widget mx-auto mt-10 rounded-lg overflow-hidden"
+            data-url="https://calendly.com/stefan-245/30min"
+            style={{ minWidth: "320px", height: "700px", maxWidth: "660px" }}
+          />
+          <Script
+            src="https://assets.calendly.com/assets/external/widget.js"
+            strategy="lazyOnload"
+          />
         </AnimateOnScroll>
 
         <AnimateOnScroll delay={0.3}>
