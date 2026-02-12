@@ -10,6 +10,15 @@ export function HeroSection() {
       id="hero"
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-b from-white-soft to-white"
     >
+      {/* Jigsaw pattern background */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: "url(/jigsaw.svg)",
+          backgroundSize: "192px 192px",
+        }}
+      />
+
       {/* Subtle decorative circles */}
       <div className="absolute -top-40 -right-40 h-96 w-96 rounded-full bg-orange/5 blur-3xl" />
       <div className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-orange/5 blur-3xl" />
