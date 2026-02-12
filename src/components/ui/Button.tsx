@@ -1,0 +1,58 @@
+"use client";
+
+import Link from "next/link";
+
+type ButtonVariant = "primary" | "secondary" | "ghost";
+type ButtonSize = "sm" | "md" | "lg";
+
+interface ButtonProps {
+  children: React.ReactNode;
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  href?: string;
+  onClick?: () => void;
+  fullWidth?: boolean;
+  className?: string;
+}
+
+const variantStyles: Record<ButtonVariant, string> = {
+  primary:
+    "bg-orange text-white hover:bg-orange-hover shadow-md hover:shadow-lg",
+  secondary:
+    "border-2 border-orange text-orange hover:bg-orange hover:text-white",
+  ghost: "text-steel hover:text-graphite",
+};
+
+const sizeStyles: Record<ButtonSize, string> = {
+  sm: "px-5 py-2.5 text-sm",
+  md: "px-8 py-3.5 text-base",
+  lg: "px-10 py-4.5 text-lg",
+};
+
+export function Button({
+  children,
+  variant = "primary",
+  size = "md",
+  href,
+  onClick,
+  fullWidth = false,
+  className = "",
+}: ButtonProps) {
+  const baseStyles =
+    "inline-flex items-center justify-center font-semibold uppercase tracking-wider rounded-md transition-all duration-150 ease-in-out cursor-pointer";
+  const styles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${fullWidth ? "w-full" : ""} ${className}`;
+
+  if (href) {
+    return (
+      <Link href={href} className={styles}>
+        {children}
+      </Link>
+    );
+  }
+
+  return (
+    <button onClick={onClick} className={styles}>
+      {children}
+    </button>
+  );
+}

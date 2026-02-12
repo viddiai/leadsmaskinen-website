@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-orange: #FF6A3D;
+  --color-orange-hover: #E85A2D;
+  --color-orange-light: #FFF0EB;
+  --color-graphite: #2B2F33;
+  --color-steel: #6E7378;
+  --color-white-soft: #FAFAFA;
+  --color-grey-light: #E7E7E7;
+  --color-success: #2ECC71;
+  --color-warning: #F4D03F;
+  --color-info: #3498DB;
+
+  /* Typography */
+  --font-display: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Shadows */
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.06);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+  /* Layout */
+  --max-w-content: 1200px;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-graphite);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fluid typography utilities */
+.text-hero {
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.text-h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.text-h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.text-h3 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.3;
+}
+
+.text-body {
+  font-size: clamp(1rem, 1.125vw, 1.125rem);
+  line-height: 1.7;
+}
+
+.text-body-lg {
+  font-size: clamp(1.125rem, 1.25vw, 1.25rem);
+  line-height: 1.6;
+}

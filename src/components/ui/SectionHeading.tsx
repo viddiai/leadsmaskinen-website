@@ -1,0 +1,29 @@
+interface SectionHeadingProps {
+  title: string;
+  subtitle?: string;
+  centered?: boolean;
+}
+
+export function SectionHeading({
+  title,
+  subtitle,
+  centered = true,
+}: SectionHeadingProps) {
+  return (
+    <div className={`mb-12 ${centered ? "text-center" : ""}`}>
+      <h2 className="text-h2 font-bold text-graphite font-[family-name:var(--font-body)]">
+        {title}
+      </h2>
+      <div
+        className={`mt-4 h-1 w-12 rounded-full bg-orange ${centered ? "mx-auto" : ""}`}
+      />
+      {subtitle && (
+        <p
+          className={`text-body-lg mt-6 text-steel ${centered ? "mx-auto max-w-2xl" : "max-w-2xl"}`}
+        >
+          {subtitle}
+        </p>
+      )}
+    </div>
+  );
+}

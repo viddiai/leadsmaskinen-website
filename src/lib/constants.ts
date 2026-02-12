@@ -1,0 +1,213 @@
+export const SITE = {
+  name: "Leadsmaskinen",
+  url: "https://leadsmaskinen.se",
+  description:
+    "Bygg din automatiserade B2B-leadmotor. Från ICP till kvalificerat möte på 1–3 veckor. Resultatbaserad betalning.",
+  founder: "Stefan Vikström",
+  email: "stefan@leadsmaskinen.se",
+} as const;
+
+export const NAV_LINKS = [
+  { label: "Så funkar det", href: "#process" },
+  { label: "Paket", href: "#packages" },
+  { label: "ROI", href: "#roi" },
+  { label: "FAQ", href: "#faq" },
+] as const;
+
+export const HERO = {
+  badge: "Ny era av B2B-leadgenerering",
+  title: "Bygg din automatiserade B2B-leadmotor.",
+  subtitle: "Från ICP till kvalificerat möte – levererat på 1–3 veckor.",
+  cta: "Starta min ICP Audit",
+  ctaSecondary: "Se hur det fungerar",
+  trust: "Förutsägbara leads. Mätbar ROI. Inga gissningar.",
+} as const;
+
+export const PROBLEMS = [
+  {
+    icon: "TrendingDown",
+    title: "Ojämnt leadflöde",
+    description:
+      "Beroende av personliga nätverk och rekommendationer – ingen förutsägbarhet.",
+  },
+  {
+    icon: "MousePointerClick",
+    title: "Låg konvertering",
+    description:
+      "Generiska hemsidor som inte är byggda för att konvertera besökare till leads.",
+  },
+  {
+    icon: "Clock",
+    title: "Ingen automation",
+    description:
+      "Manuell uppföljning som tappar leads och slösar värdefull tid.",
+  },
+  {
+    icon: "Receipt",
+    title: "Byrå utan resultat",
+    description:
+      "Timdebitering och retainers utan koppling till faktiska affärer.",
+  },
+] as const;
+
+export const PROCESS_STEPS = [
+  {
+    step: 1,
+    title: "ICP Persona Audit & Outreach",
+    description:
+      "Vi identifierar exakt vilka beslutsfattare du ska nå – och kontaktar dem via cold email och LinkedIn.",
+    icon: "Target",
+  },
+  {
+    step: 2,
+    title: "Konverteringsyta",
+    description:
+      "Portal eller landningssida som ger värde och konverterar besökare till kvalificerade leads.",
+    icon: "LayoutTemplate",
+  },
+  {
+    step: 3,
+    title: "Marketing Automation",
+    description:
+      "Automatiserade mejlserier som nurturar leads hela vägen till bokade möten.",
+    icon: "Workflow",
+  },
+] as const;
+
+export const PACKAGES = {
+  portal: {
+    name: "Portal",
+    label: "Premium",
+    popular: true,
+    price: "25 000",
+    unit: "kr",
+    priceNote: "Engångsavgift",
+    delivery: "3 veckor",
+    features: [
+      "ICP Persona Audit (inkluderad)",
+      "Nischad portal med 5+ CTA:er",
+      "ROI-kalkylator, audit, quiz, boka möte",
+      "Cold email + LinkedIn-outreach",
+      "1 marketing automation-funnel (5 mejl)",
+      "Löpande: Pay-per-lead",
+    ],
+    cta: "Bygg min leadmotor",
+  },
+  landing: {
+    name: "Landningssida",
+    label: "Standard",
+    popular: false,
+    price: "9 900",
+    unit: "kr",
+    priceNote: "Engångsavgift",
+    delivery: "1 vecka",
+    features: [
+      "ICP Persona Audit (inkluderad)",
+      "Landningssida med 1 konverteringspunkt",
+      "Cold email + LinkedIn-outreach",
+      "1 marketing automation-funnel (5 mejl)",
+      "Löpande: Pay-per-lead eller 2 900 kr/mån",
+    ],
+    cta: "Kom igång snabbt",
+  },
+} as const;
+
+export const ROI_STATS = [
+  { value: "100 000 kr", label: "Genomsnittligt affärsvärde" },
+  { value: "150", label: "Marketing Qualified Leads" },
+  { value: "45", label: "Sales Qualified Leads" },
+  { value: "23", label: "Stängda affärer" },
+] as const;
+
+export const ROI_RESULT = {
+  revenue: "2 300 000 kr",
+  investment: "240 000 kr",
+  profit: "450 000 kr",
+  roi: "575%",
+} as const;
+
+export const COMPARISON = [
+  {
+    dimension: "Betalning",
+    agency: "Timmar & retainers",
+    leadsmaskinen: "Resultatbaserad (pay-per-lead)",
+  },
+  {
+    dimension: "Incitament",
+    agency: "Fler timmar = mer intäkt",
+    leadsmaskinen: "Fler leads = mer intäkt",
+  },
+  {
+    dimension: "Transparens",
+    agency: "Månadsrapporter",
+    leadsmaskinen: "Delad dashboard i realtid",
+  },
+  {
+    dimension: "Leverans",
+    agency: "Manuellt, personberoende",
+    leadsmaskinen: "Automatiserat, produktifierat",
+  },
+  {
+    dimension: "Tid till resultat",
+    agency: "Veckor–månader",
+    leadsmaskinen: "1–3 veckor",
+  },
+  {
+    dimension: "Optimering",
+    agency: "Eftertanke",
+    leadsmaskinen: "Månadsvis optimeringsloop",
+  },
+] as const;
+
+export const IDEAL_FIT = [
+  "B2B med höga priser eller marginaler",
+  "Bevisat erbjudande, behöver mer pipeline",
+  "Kapacitet att följa upp och stänga leads",
+  "Villig att delta i ICP-workshop",
+  "Öppen för AI-driven automation",
+] as const;
+
+export const POOR_FIT = [
+  "Nystartat utan bevisad affärsmodell",
+  "B2C eller mycket låga marginaler",
+  "Ingen som aktivt bearbetar leads",
+  "Söker snabba engångsresultat",
+] as const;
+
+export const FAQ_ITEMS = [
+  {
+    question: "Vad räknas som en lead?",
+    answer:
+      "Vi skiljer på MQL (Marketing Qualified Lead) och SQL (Sales Qualified Lead / bokat möte). Definitionen sätts gemensamt innan start så att det är glasklart vad du betalar för.",
+  },
+  {
+    question: "Hur säkerställer ni kvaliteten på leads?",
+    answer:
+      "Genom ICP Persona Audit definierar vi exakt din idealkund. Kvalitetsfilter och en gemensam dashboard ger full transparens – du ser varje lead i realtid.",
+  },
+  {
+    question: "Hur snabbt kan vi vara igång?",
+    answer:
+      "Landningssida: 1 vecka. Portal: 3 veckor. Vi börjar med en ICP Persona Audit och har dina outbound-kampanjer och automation redo vid lansering.",
+  },
+  {
+    question: "Vad krävs av oss som kund?",
+    answer:
+      "Delta i en ICP-workshop (ca 2 timmar), var bollplank kring budskap, och ha kapacitet att följa upp inkommande leads. Vi tar hand om resten.",
+  },
+  {
+    question: "Vad händer om ni inte levererar tillräckligt?",
+    answer:
+      "Pay-per-lead innebär att du bara betalar för levererade leads. Vi har gemensamma incitament – ingen leverans, ingen kostnad utöver startavgiften.",
+  },
+  {
+    question: "Varför finns det en startavgift?",
+    answer:
+      "Startavgiften täcker ICP-audit, portalbygge/landningssida, outbound-setup och automationskonfiguration. Det är ingen retainer – det är en engångsinvestering i din leadmotor.",
+  },
+  {
+    question: "Kan vi börja med bara en ICP Persona Audit?",
+    answer:
+      "Ja. En fristående ICP Persona Audit kostar 7 500 kr. Om du sedan väljer att gå vidare med ett paket räknas den av mot startavgiften.",
+  },
+] as const;
