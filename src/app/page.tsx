@@ -6,6 +6,7 @@ import { PackagesSection } from "@/components/sections/PackagesSection";
 import { RoiSection } from "@/components/sections/RoiSection";
 import { ComparisonSection } from "@/components/sections/ComparisonSection";
 import { IdealClientSection } from "@/components/sections/IdealClientSection";
+import { GuideSection } from "@/components/sections/GuideSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { FinalCtaSection } from "@/components/sections/FinalCtaSection";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <ComparisonSection />
       <IdealClientSection />
       <PackagesSection />
+      <GuideSection />
       <FaqSection />
       <FinalCtaSection />
     </>
