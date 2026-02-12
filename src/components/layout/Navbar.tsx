@@ -47,8 +47,9 @@ export function Navbar() {
         {/* Logo */}
         <a
           href="#"
-          className="font-[family-name:var(--font-display)] text-xl font-bold text-graphite"
+          className="flex items-center gap-2 font-[family-name:var(--font-display)] text-xl font-bold text-graphite"
         >
+          <img src="/logo_L.png" alt="" className="h-8 w-auto" />
           Leads<span className="text-orange">maskinen</span>
         </a>
 
