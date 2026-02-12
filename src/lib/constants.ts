@@ -11,6 +11,7 @@ export const NAV_LINKS = [
   { label: "Så funkar det", href: "#process" },
   { label: "Paket", href: "#packages" },
   { label: "ROI", href: "#roi" },
+  { label: "Guide", href: "#guide" },
   { label: "FAQ", href: "#faq" },
 ] as const;
 
