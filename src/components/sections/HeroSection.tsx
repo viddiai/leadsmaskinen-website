@@ -60,7 +60,7 @@ export function HeroSection() {
           <img
             src="/process-steps.png"
             alt="Steg 1: Identifiera idealkunder. Steg 2: Kvalificera leads. Steg 3: Stäng affärer."
-            className="mx-auto mt-16 w-[60%] rounded-xl bg-white p-6"
+            className="mx-auto mt-16 w-[60%]"
           />
         </AnimateOnScroll>
       </div>
