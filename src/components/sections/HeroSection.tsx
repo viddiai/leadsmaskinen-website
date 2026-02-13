@@ -31,36 +31,29 @@ export function HeroSection() {
         }}
       >
         <AnimateOnScroll>
-          <span className="inline-block rounded-full bg-orange-light px-4 py-1.5 text-sm font-medium text-orange">
-            {HERO.badge}
-          </span>
-        </AnimateOnScroll>
-
-        <AnimateOnScroll delay={0.1}>
-          <h1 className="text-hero mx-auto mt-6 max-w-4xl font-[family-name:var(--font-display)] font-extrabold text-graphite">
+          <h1 className="text-hero mx-auto max-w-4xl font-[family-name:var(--font-display)] font-extrabold text-graphite">
             {HERO.title}
           </h1>
         </AnimateOnScroll>
 
+        <AnimateOnScroll delay={0.1}>
+          <p className="text-hero mx-auto mt-2 max-w-4xl font-[family-name:var(--font-display)] font-extrabold text-graphite/20">
+            {HERO.tagline}
+          </p>
+        </AnimateOnScroll>
+
         <AnimateOnScroll delay={0.2}>
-          <p className="text-body-lg mx-auto mt-6 max-w-2xl text-steel">
+          <p className="text-body-lg mx-auto mt-8 max-w-2xl text-steel">
             {HERO.subtitle}
           </p>
         </AnimateOnScroll>
 
         <AnimateOnScroll delay={0.3}>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-10">
             <Button href="#cta-final" size="lg">
-              {HERO.cta}
-            </Button>
-            <Button href="#process" variant="ghost" size="lg">
-              {HERO.ctaSecondary} &darr;
+              {HERO.cta} &rarr;
             </Button>
           </div>
-        </AnimateOnScroll>
-
-        <AnimateOnScroll delay={0.4}>
-          <p className="mt-8 text-sm text-steel/70">{HERO.trust}</p>
         </AnimateOnScroll>
       </div>
     </section>

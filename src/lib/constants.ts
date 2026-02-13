@@ -16,12 +16,11 @@ export const NAV_LINKS = [
 ] as const;
 
 export const HERO = {
-  badge: "Ny era av B2B-leadgenerering",
-  title: "Bygg din automatiserade B2B-leadmotor.",
-  subtitle: "Från ICP till kvalificerat möte – levererat på 1–3 veckor.",
-  cta: "Starta min ICP Audit",
-  ctaSecondary: "Se hur det fungerar",
-  trust: "Förutsägbara leads. Mätbar ROI. Inga gissningar.",
+  title: "Ersättning för resultat, inte timmar",
+  tagline: "Idealkunder in. Affärer ut.",
+  subtitle:
+    "Vi bygger nichade portaler som ökar konvertering, kvalificerar målgruppen och skapar en förutsägbar pipeline. Inga onödiga funktioner, bara det som driver affärer.",
+  cta: "Boka konsultation: få fler kvalificerade leads",
 } as const;
 
 export const PROBLEMS = [
