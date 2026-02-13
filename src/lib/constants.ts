@@ -69,7 +69,7 @@ export const PROCESS_STEPS = [
     step: 3,
     title: "Marketing Automation",
     description:
-      "Automatiserade mejlserier som nurturar leads hela vägen till bokade möten.",
+      "Automatiserade mejlserier som värmer upp leads hela vägen till bokade möten.",
     icon: "Workflow",
   },
 ] as const;

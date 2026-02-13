@@ -37,7 +37,7 @@ export default function GuidePage() {
           {[
             "Hur du identifierar din idealkund med precision",
             "De 5 konverteringspunkterna som varje portal behöver",
-            "Automation som nurturar leads medan du sover",
+            "Automation som värmer upp leads medan du sover",
           ].map((item) => (
             <li key={item} className="flex gap-3 text-body">
               <Check className="mt-0.5 h-5 w-5 shrink-0 text-success" />
